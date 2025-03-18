@@ -1,7 +1,7 @@
 'use client';
 
 import CharacterCard from './CharacterCard';
-import { Character } from '@/types/rickAndMorty';
+import { Character, GenderFilter, StatusFilter } from '@/types/rickAndMorty';
 import { useQueryState } from 'nuqs';
 import { parseAsString, parseAsInteger } from 'nuqs/server';
 import { useCharacters } from '@/hooks/useCharacters';
@@ -16,8 +16,8 @@ export default function CharacterList() {
   );
 
   const { data, isLoading, isError } = useCharacters({
-    status: status as any,
-    gender: gender as any,
+    status: status as StatusFilter,
+    gender: gender as GenderFilter,
     page,
   });
 

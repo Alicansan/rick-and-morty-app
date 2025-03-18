@@ -1,7 +1,7 @@
 'use client';
 
 import { Character } from '@/types/rickAndMorty';
-import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
 import { useCharactersStore } from '@/store/characterStore';

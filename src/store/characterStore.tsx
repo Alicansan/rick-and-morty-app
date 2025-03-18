@@ -1,5 +1,4 @@
 import { create } from 'zustand';
-import { CharacterFilters } from '@/types/rickAndMorty';
 
 interface CharactersState {
   selectedCharacterId: number | null;

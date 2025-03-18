@@ -6,6 +6,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useQueryState } from 'nuqs';
 import { parseAsString, parseAsInteger } from 'nuqs/server';
 import { useCharacters } from '@/hooks/useCharacters';
+import { GenderFilter, StatusFilter } from '@/types/rickAndMorty';
 
 export default function CharacterPagination() {
   const [status] = useQueryState('status', parseAsString);
@@ -16,8 +17,8 @@ export default function CharacterPagination() {
   );
 
   const { data, isLoading } = useCharacters({
-    status: status as any,
-    gender: gender as any,
+    status: status as StatusFilter,
+    gender: gender as GenderFilter,
     page,
   });
 
